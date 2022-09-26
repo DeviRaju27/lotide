@@ -1,14 +1,17 @@
-const assertEqual = function (actual, expected) {
+const eqArrays = function (array1, array2) {
 
-  if (actual === expected) {
-    //console.log();
-    return "✅✅✅aassertion passed:" + actual + "!===" + expected;
 
+  if (array1.length !== array2.length) {
+    return false;
   } else {
-    //console.log();
-    return "❌❌❌assertion failed:" + actual + "!===" + expected;
-  }
+    for (let i = 0; i < array1.length; i++) {
+      if (array1[i] !== array2[i]) {
 
+        return false;
+      }
+    }
+  }
+  return true;
 };
 
 const ab = { a: "1", b: "2" };
@@ -25,7 +28,7 @@ const eqObjects = function (object1, object2) {
     let value1 = object1[eachKeyObj1];
     let value2 = object2[eachKeyObj1];
 
-    if (!assertEqual(value1, value2)) {
+    if (!eqArrays(value1, value2)) {
       return false;
     } else if (typeof value1 !== typeof value2) {
       return false;
