@@ -1,3 +1,3 @@
 const assertEqual = require('../assertEqual')
 
-console.log(assertEqual("light", "liht"));
+console.log(assertEqual("light", "light"));
