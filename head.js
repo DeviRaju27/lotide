@@ -1,7 +1,7 @@
 
 
 
-const head = function firstElement(arr) {
+const head = function (arr) {
   let first = arr[0];
   return first;
 }
