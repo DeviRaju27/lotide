@@ -15,10 +15,6 @@ const tail   = require('./tail');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
 
-
-
-
-
 module.exports = {
   head,
   tail,
